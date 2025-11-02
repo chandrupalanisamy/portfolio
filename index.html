@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Chandrakumar</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="stylesheet.css" />
+
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+<!-- Google Fonts -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <!-- Add this in your <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
+    
+
+  <style>
+    body {
+      background: radial-gradient(circle at right, #3c0066, #1b0033);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* === SOCIAL ICONS === */
+    .social-icons {
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      animation: floatIcons 5s ease-in-out infinite;
+    }
+
+    .social-icons a {
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      transition: all 0.4s ease;
+      overflow: hidden;
+    }
+
+    .social-icons i {
+      font-size: 30px;
+      color: #cfcfcf;
+      z-index: 2;
+      transition: all 0.4s ease;
+    }
+
+    .social-icons a::before {
+      content: "";
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      background: linear-gradient(45deg,
+        #ff0000, #ff7300, #ffeb00, #47ff00, #00ffee, #2b65ff, #8000ff, #ff0080);
+      z-index: 1;
+      filter: blur(10px);
+      opacity: 0;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      animation: rainbowGlow 3s linear infinite;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.25) rotate(12deg);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+    }
+
+    .social-icons a:hover::before {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    .social-icons a:hover i {
+      color: #fff;
+      text-shadow: 0 0 10px #fff;
+    }
+
+    /* Tooltip Styling */
+    .tooltip {
+      position: absolute;
+      bottom: 85px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+    }
+
+    .tooltip::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 6px;
+      border-style: solid;
+      border-color: rgba(255, 255, 255, 0.1) transparent transparent transparent;
+    }
+
+    .social-icons a:hover .tooltip {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Floating & Rainbow Animations */
+    @keyframes floatIcons {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes rainbowGlow {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    /* === BUTTON STYLING === */
+    .btn-box {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #0ef;
+      color: #111;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 18px;
+      box-shadow: 0 0 15px #0ef;
+      transition: 0.4s;
+      margin-top: 30px;
+    }
+
+    .btn-box:hover {
+      background: transparent;
+      color: #0ef;
+      border: 2px solid #0ef;
+      box-shadow: 0 0 25px #0ef, 0 0 50px #0ef;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo">Portfolio</a>
+
+    <nav class="navbar">
+      <a href="#about" style="background-color: red; border-radius: 10px;">Home</a>
+      <a href="#">About</a>
+      <a href="#skills" >Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="home" id="About">
+    <div class="home-content">
+      <h3 class="fade-in">Hello, It's Me</h3>
+      <h1 class="name-glow">Chandrakumar</h1>
+      <h3 class="typewriter">And I'm a <span class="highlight"></span></h3>
+      <p class="float-text">
+        I’m a passionate Full-Stack Python Developer with proven expertise in building powerful, scalable, and user-centric applications.
+        <br> I focus on writing clean, maintainable code, enhancing performance, and ensuring secure architectures to create exceptional user experiences.
+      </p>
+
+      <div class="social-icons">
+ <a href="mailto:chandrupnd2@gmail.com?subject=Hello Chandrakumar&body=I saw your portfolio and wanted to connect!" target="_blank" title="Mail">
+  <i class='bx bxl-gmail'></i>
+  <span class="tooltip">Mail</span>
+</a>
+
+
+  <a href="http://github.com/chandrupalanisamy" target="_blank" title="GitHub">
+    <i class='bx bxl-github'></i>
+    <span class="tooltip">GitHub</span>
+  </a>
+
+  <a href="http://linkedin.com/in/chandrakumar2003" target="_blank" title="LinkedIn">
+    <i class='bx bxl-linkedin'></i>
+    <span class="tooltip">LinkedIn</span>
+  </a>
+
+  <a href="https://www.instagram.com/chandrukumar_?igsh=ZDI1Y2R4NmVyM2Jr&utm_source=qr" target="_blank" title="Instagram">
+    <i class='bx bxl-instagram'></i>
+    <span class="tooltip">Instagram</span>
+  </a>
+</div>
+
+
+      <a href="" class="btn-box">Download My CV</a>
+    </div>
+  </section>
+
+  <section id="skills" class="skills-section">
+  <h2 class="section-title">My <span>Skills</span></h2>
+  <p class="section-subtitle">
+    I continuously improve my skills to build efficient, secure, and modern applications.
+  </p>
+
+  <div class="skills-container">
+
+    <div class="skill">
+      <div class="skill-info">
+        <i class="devicon-html5-plain colored"></i>
+        <span>HTML</span>
+        <span class="percent">95%</span>
+      </div>
+      <div class="progress-bar"><div class="progress" data-width="95%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-info">
+        <i class="devicon-css3-plain colored"></i>
+        <span>CSS</span>
+        <span class="percent">90%</span>
+      </div>
+      <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-info">
+        <i class="devicon-javascript-plain colored"></i>
+        <span>JavaScript</span>
+        <span class="percent">85%</span>
+      </div>
+      <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-info">
+        <i class="devicon-bootstrap-plain colored"></i>
+        <span>Bootstrap</span>
+        <span class="percent">80%</span>
+      </div>
+      <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-info">
+        <i class="devicon-react-original colored"></i>
+        <span>React</span>
+        <span class="percent">75%</span>
+      </div>
+      <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-info">
+        <i class="devicon-python-plain colored"></i>
+        <span>Python</span>
+        <span class="percent">95%</span>
+      </div>
+      <div class="progress-bar"><div class="progress" data-width="95%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-info">
+        <i class="devicon-django-plain colored"></i>
+        <span>Django</span>
+        <span class="percent">90%</span>
+      </div>
+      <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-info">
+        <i class="devicon-flask-original colored"></i>
+        <span>Flask</span>
+        <span class="percent">85%</span>
+      </div>
+      <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-info">
+        <i class="devicon-mongodb-plain colored"></i>
+        <span>MongoDB</span>
+        <span class="percent">80%</span>
+      </div>
+      <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-info">
+        <i class="devicon-mysql-plain colored"></i>
+        <span>SQL / MySQL</span>
+        <span class="percent">85%</span>
+      </div>
+      <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-info">
+        <i class="devicon-github-original colored"></i>
+        <span>GitHub</span>
+        <span class="percent">90%</span>
+      </div>
+      <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-info">
+        <i class="devicon-express-original colored"></i>
+        <span>REST API</span>
+        <span class="percent">85%</span>
+      </div>
+      <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== Achievements & Certificates Section ===== -->
+<section class="achievements-section" id="projects">
+  <h2 class="section-title">My <span>Achievements And Projects</span></h2>
+  <p class="section-subtitle">
+    Highlights of my accomplishments, certifications, and milestones in my full-stack journey
+  </p>
+
+  <div class="achievements-container">
+    <!-- Achievement 1 -->
+    <div class="achievement-card" data-tilt>
+      <i class="bx bxs-graduation"></i>
+      <h3>Full Stack Python Nano Degree</h3>
+      <p>
+        Successfully completed the Nano Degree in Full Stack Python at
+        <strong>Imagecon Academy, Salem</strong>, mastering Django, Flask, and
+        front-end integration.
+      </p>
+      <span class="certificate-tag">🎓 Course Completion Certificate</span>
+
+      <div class="certificate-img">
+        <img
+          src="course completion.jpeg"
+          alt="Full Stack Python Nano Degree Certificate"
+        />
+      </div>
+    </div>
+
+    <!-- Achievement 2 -->
+    <div class="achievement-card" data-tilt>
+      <i class="bx bxs-trophy"></i>
+      <h3>Student Attendance Management System</h3>
+      <p>
+        Awarded for consistent performance, coding excellence, and contribution
+        in Python and SQL at <strong>Imagecon Academy</strong>.
+      </p>
+      <span class="certificate-tag">🏅 Certificate Awarded</span>
+
+      <div class="certificate-img">
+        <img
+          src="python certificate.jpg"
+          alt="Student Attendance Management System Certificate"
+        />
+      </div>
+    </div>
+
+      <!-- Achievement 4 -->
+    <div class="achievement-card" data-tilt>
+      <i class="bx bx-code-alt"></i>
+      <h3>Anime Infinity – Frontend Project</h3>
+      <p>
+        Developed a visually stunning anime website using
+        <strong>HTML, CSS, and JavaScript</strong>, showcasing advanced UI design
+        and responsive front-end techniques.
+      </p>
+      <span class="certificate-tag">🏆 Advanced Level Certificate</span>
+
+      <div class="certificate-img">
+        <img
+          src="front-end certificate.jpg"
+          alt="Anime Infinity Advanced Level Certificate"
+        />
+      </div>
+    </div>
+
+    <!-- Achievement 3 -->
+    <div class="achievement-card" data-tilt>
+      <i class="bx bxl-python"></i>
+      <h3>Inventory & Billing Management System</h3>
+      <p>
+        Created a full-stack Django project with billing, dashboards,
+        authentication, and data export (PDF/CSV) features.
+      </p>
+      <span class="certificate-tag"></span>
+
+      <div class="certificate-img">
+    
+      </div>
+    </div>
+      <!-- Achievement 4 -->
+     <div class="achievement-card" data-tilt>
+      <i class="fa-solid fa-flask"></i>
+      <h3>Blog App Using Flask</h3>
+      <p>
+        I built a Flask-based Blog App with user authentication, post creation, editing, and deletion features using Flask, SQLAlchemy,
+         and Bootstrap for a clean and responsive design.
+      </p>
+      <span class="certificate-tag"></span>
+
+      <div class="certificate-img">
+    
+      </div>
+    </div>
+
+  
+  </div>
+</section>
+
+<!-- ===== Certificate Image Modal ===== -->
+<div class="image-modal" id="imageModal">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="modalImg" />
+</div>
+
+<section id="contact" class="contact-section">
+  <h2 class="section-title">Get In <span>Touch</span></h2>
+  <p class="section-subtitle">Have a project or idea? Drop me a message below — I’ll get back soon.</p>
+
+  <form id="contactForm" action="https://formspree.io/f/movpkjpj" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="text" name="subject" placeholder="Subject"/>
+    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+
+    <button type="submit" class="btn-send">
+      <span>Send Message</span>
+    </button>
+
+    <div id="formAlert" class="form-alert"></div>
+  </form>
+</section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
